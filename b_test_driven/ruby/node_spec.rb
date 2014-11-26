@@ -1,5 +1,12 @@
 require_relative 'node.rb'
 describe Node do
+	describe 'creation' do
+		it 'has a convenience constructor' do
+			node = Node.string_to_list('a,b,c')
+			expect(node.to_s).to eq("a, b, c")
+		end
+
+	end
 	describe "to_s" do
 		it "is the element for a list with one element" do
 			expect(Node.new("X").to_s).to eq("X")

@@ -4,6 +4,11 @@ class Node
 		@data = data
 		@next_node = next_node
 	end
+	def self.string_to_list(s)
+		nodes = s.split(",")
+		nodes.reverse.inject(nil){|list, element| Node.new(element,list)}
+	end
+
 	def to_s
 		unless next_node
 		  data.to_s 
