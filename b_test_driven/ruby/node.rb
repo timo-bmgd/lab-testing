@@ -9,21 +9,29 @@ class Node
     @next_node = next_node
   end
 
-  def self.string_to_list(s)
-    nodes = s.split(',')
-    nodes.reverse.inject(nil) { |list, element| Node.new(element, list) }
-  end
-
-  def to_s
-    if next_node.nil?
-      data.to_s
-    else
-      data.to_s + ', ' + next_node.to_s
-    end
-  end
-
   def delete(data)
     # this is a too simple implementation to satisfy the first deletion example.
     next_node
   end
+
+  # pre-defined convenience methods for creation and conversion to string.
+  def self.from_string(s)
+    nodes = s.split(',')
+    nodes.map(&:strip).reverse.inject(nil) { |list, element| Node.new(element, list) }
+  end
+
+  include Enumerable
+  def each
+    yield data
+    current = next_node
+    until current.nil?
+      yield current.data
+      current = current.next_node
+    end
+  end
+
+  def to_s
+    inject { |memo, e| memo + ', ' + e}
+  end
+
 end
