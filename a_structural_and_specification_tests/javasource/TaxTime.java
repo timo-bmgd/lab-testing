@@ -82,7 +82,7 @@ public class TaxTime {
     System.out.println ("Your income was " + income + " €.");
     System.out.println ("You have " + nFamilyMembers + " family members.");
     System.out.println ("Your total tax is " + taxTotal + " €.");
-    System.out.println ("Family member tax saving is " + nFamilyMembers*100 + "€.");
+    System.out.println ("Family member tax saving is " + nFamilyMembers*100 + "€. ");
     System.out.println ("=€=€=€=€=€=€=€=€=€=€=€=€=€=€=€");
     }
 }
