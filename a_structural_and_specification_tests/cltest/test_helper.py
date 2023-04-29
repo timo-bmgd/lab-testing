@@ -15,6 +15,7 @@ def call_shell_command(command_with_parameter, interactive_input):
     command_with_parameter: "java GradingScale"
     interactive_input: array with inputlines
     """
+    interactive_input = [str(e) for e in interactive_input]
     interactive_input = '\n'.join(interactive_input) + '\n'
     interactive_input = interactive_input.encode("utf-8")
     command = command_with_parameter.split()
