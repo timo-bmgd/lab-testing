@@ -4,4 +4,4 @@
     -v $(pwd):/data \
     -w /data \
     -t bkleinen/pytestjava \
-    python -m pytest -x cltest/*.py
+    python -m pytest -x -rx cltest/*.py
