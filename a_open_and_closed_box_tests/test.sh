@@ -1,2 +1,2 @@
 export PYTHONPATH=".:$PYTHONPATH"
-pytest -x -rx cltest
+pytest -x -rx tests

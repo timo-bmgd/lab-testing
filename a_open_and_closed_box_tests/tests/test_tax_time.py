@@ -1,4 +1,4 @@
-import cltest.test_helper as th
+import tests.test_helper as th
 import re
 # test examples
 command_python = "python3 python/tax_time.py"
