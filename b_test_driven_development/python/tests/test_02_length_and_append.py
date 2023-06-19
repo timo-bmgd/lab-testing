@@ -1,5 +1,5 @@
 import unittest
-from linkedlist.node import Node
+from b_test_driven_development.python.linkedlist.node import Node
 
 
 class TestNodeLength(unittest.TestCase):
