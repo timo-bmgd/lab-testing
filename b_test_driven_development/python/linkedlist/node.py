@@ -54,7 +54,6 @@ class Node:
         return head
 
     def delete(self, data):
-        # Handle the case where the first node needs to be deleted
         while self.data == data:
             self = self.next
             if self is None:
